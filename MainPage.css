@@ -67,3 +67,14 @@ table
     padding-bottom: 1px;
     border:solid;
 }
+
+.flex-container
+{
+    display: flex;
+}
+
+#titleBanner
+{
+    height:400px;
+    background-size: 100%;
+}
