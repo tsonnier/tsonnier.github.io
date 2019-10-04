@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="MainPage.css">
+
+</head>
+<body onload="initialize()">
+    <table align="center" width="100%" cellspacing="5" cellpadding="5px">
+      <tbody>
+        <tr>
+          <td width="20%"><a class="navbar-brand" href="./Index.html">Portfolio</a></td>
+          <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./About">About</a> | <a href="./Contact">Contact</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+	<br>
+    
+
+    <div id="TitleContent" style="text-align: center">
+        <a href="./Index.html">
+            <em>Portfolio</em>
+        </a>
+        <br />
+    </div>
+
+    <br>
+
+    <!-- Tab Links-->
+    <div class="tab">
+        <button class="tablinks" onclick="openTool(event, 'Bio')" id="defaultOpen">Bio</button>
+        <button class="tablinks" onclick="openTool(event, 'Projects')">Projects</button>
+        <button class="tablinks" onclick="openTool(event, 'Skills')">Professional Skills </button>
+        <button class="tablinks" onclick="openTool(event, 'ContactMe')">Contact Me</button>
+
+    </div>
+
+    <!-- Tab Content-->
+    <div id="Bio" class="tabcontent">
+        <h3>Bio</h3>
+        <div name ="CharacterAddDiv" style="vertical-align: top">
+            <table align="center" width="100%" cellspacing="5" cellpadding="5px">
+                
+            </table>
+        </div>    
+        
+    </div>
+    
+
+    <!-- Tab Content-->
+    <div id="Projects" class="tabcontent">
+        <h3>Projects</h3>
+
+        
+    </div>
+
+    <!-- Tab Content-->
+    <div id="Skills" class="tabcontent">
+        <h3>Professional Skills</h3>
+
+    </div>
+
+    
+    <div id="ContactMe" class="tabcontent">
+        <h3>Contact Me</h3>
+    </div>
+
+	<script language="javascript" src="jquery.js"></script>
+    <script language="javascript" src="Logic.js"></script>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+	
+</body>
+</html>
