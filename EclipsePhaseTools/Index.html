@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Eclipse Phase - GM Tools</title>
+    <link rel="stylesheet" type="text/css" href="MainPage.css">
+
+</head>
+<body onload="initialize()">
+    <table align="center" width="100%" cellspacing="5" cellpadding="5px">
+      <tbody>
+        <tr>
+          <td width="20%"><a class="navbar-brand" href="./Index.html">Eclipse Phase Tools</a></td>
+          <td width="50%" align="right"><a href="./Index.html">Home</a> | <a href="./About">About</a> | <a href="./Contact">Contact</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+	<br>
+    
+
+    <div id="TitleContent" style="text-align: center">
+        <a href="./Index.html">
+            <em>Eclipse Phase GM Tools</em>
+        </a>
+        <br />
+    </div>
+
+    <br>
+
+    <!-- Tab Links-->
+    <div class="tab">
+        <button class="tablinks" onclick="openTool(event, 'NewChars')" id="defaultOpen">New Characters</button>
+        <button class="tablinks" onclick="openTool(event, 'Aptitudes')">Aptitudes</button>
+        <button class="tablinks" onclick="openTool(event, 'Initiative')">Initiative </button>
+        <button class="tablinks" onclick="openTool(event, 'CombatSkills')">Combat Skills</button>
+
+    </div>
+
+    <!-- Tab Content-->
+    <div id="NewChars" class="tabcontent">
+        <h3>New Characters</h3>
+        <div name ="CharacterAddDiv" style="vertical-align: top">
+            <table align="center" width="100%" cellspacing="5" cellpadding="5px">
+                <tr>
+                    <td><p>Add Character to List</p></td>
+                    <td><button id="SaveList" class="StdButton" onclick="SaveCharList()">Save List</button></td>
+                    <td>Select the file to load <input type="file" id="openCharList"/></td>
+                </tr>
+                <tr>
+                    <td width="25%" valign="top">
+                        <textarea id="CharNameInit" rows="1" cols="42">Enter Name</textarea>
+                    </td>
+                    <td width="5%" valign="top">
+                        <textarea id="CharInitVal" rows="1" cols="5">0</textarea>
+                    </td>
+                    <td width="70%" valign="top">
+                        <button id="AddCharInitiative" class="StdButton" onclick="AddCharInit()">Add Character</button>
+                    </td>
+                </tr>
+            </table>
+        </div>    
+
+        <div id="TotalCharacterList" style="vertical-align: top">
+            <!-- filled by Javascript -->
+        </div>
+        
+    </div>
+    
+
+    <!-- Tab Content-->
+    <div id="Aptitudes" class="tabcontent">
+        <h3>Aptitudes</h3>
+
+        
+    </div>
+
+    <!-- Tab Content-->
+    <div id="Initiative" class="tabcontent">
+        <h3>Initiative</h3>
+
+
+        <div name="InitiativeOptionsDiv" style="vertical-align:top">
+            <table class="control" align="left" width="25%" style="border:none">
+                <tr>
+                    <td><button id="CalcInitButton" class="StdButton" onclick="CalcInit()">Calculate Initiative</button></td>
+                    <td><button id="RandInitButton" class="StdButton" onclick="generateRandom()">Generate Random Initiative</button></td>
+                    <td><button id="NextCharacter" class="StdButton" onclick="nextChar()">Next Character</button></td>
+                    <td><button id="NextTurn" class="StdButton" onclick="nextTurn()">Next Turn</button></td>
+                </tr>
+
+            </table>     
+        </div>
+
+
+        <div id="CharacterList" style="vertical-align: top">
+            <!-- filled by Javascript -->
+        </div>
+
+    </div>
+
+    
+    <div id="CombatSkills" class="tabcontent">
+        <h3>Combat Skills</h3>
+        <p>Character List <select id="CharacterDropDown"> </select></p>
+        <p>Fray<textarea id="FrayValue" rows="1" cols="5"">0</textarea></p> 
+        
+        <div id="CombatSkillsList" style="vertical-align: top">
+            <textarea id="CombatSkillsTextArea" rows="10" cols="60"></textarea>
+            <!-- filled by Javascript -->
+        </div>
+    </div>
+
+	<script language="javascript" src="jquery.js"></script>
+    <script language="javascript" src="Utilities.js"></script>
+    <script language="javascript" src="Logic.js"></script>
+    <script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+	
+</body>
+</html>
