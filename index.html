@@ -4,13 +4,14 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="MainPage.css">
 </head>
 
 <body onload="initialize()">
     <div id="titleBanner" style="background-image: url('CodeText.png')" >
-        <h1 style="color: white; text-align: center; line-height: 280px">Timothy Sonnier, Software Developer</h1>
+        <h1 id="bannerText">Timothy Sonnier, Software Developer</h1>
     </div>
 
 
@@ -24,76 +25,103 @@
     </div>
 
     <!-- Tab Content-->
-    <div id="Bio" class="tabcontent">
-        <h1>Bio</h1>
-        <h3>Professional looking for a position doing software development. Currently working in college education and after ten years is looking to transition to a new career.</h3>
+    <div class="page">
+
+        <div id="Bio" class="tabcontent">
+            <div class="section header">
+                <h1>Bio</h1>
+            </div>
+            <div class="section content">
+                <h3>Professional looking for a position doing software development. Currently working in college education and after ten years is looking to transition to a new career.</h3>
+            </div>            
+        </div>
         
-    </div>
+
+        <!-- Tab Content-->
+        <div id="Projects" class="tabcontent">
+            <div class="section header">
+                <h1>Projects</h1>
+            </div>
+            <div class="section content">
+                <table style="width: 100%">
+
+                    <tr>
+                        <td>
+                            <div class="section feature-1">
+                                <h2>Eclipse Phase Tools</h2>
+                                <p>Tools for assisting with the tabletop RPG Eclipse Phase</p>
+                                <a href="https://github.com/tsonnier/EclipsePhaseTools"><img src="CodeButton.png"/></a>
+                                <a href="http://tsonnier.github.io/EclipsePhaseTools/Index.html"><img src="DemoButton.png"/></a>
+                            </div>
+                        </td>
+            
+                        <td>
+                            <div class="section feature-2">
+                                <h2>Tax Calculator</h2>
+                                <p>Very, very basic example tax calculator using HTML, CSS, and javascript.</p>
+                                <a href="https://github.com/tsonnier/Tax-Calculator"><img src="CodeButton.png"/></a>
+                                <a href="http://tsonnier.github.io/Tax-Calculator/Index.html"><img src="DemoButton.png"/></a>
+                            </div>
+            
+                        </td>
+        
+                    </tr>
+                            
+                </table>
+            </div>
+
+
+        </div>
+
+        <!-- Tab Content-->
+        <div id="Skills" class="tabcontent">
+            <div class="section header">
+                <h1>Professional Skills</h1>
+            </div>
+            <div class="section content">
+                <h2>Languages Used</h2>
+                <ul>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>HTML5/Javascript/CSS</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div id="ContactMe" class="tabcontent">
+            <div class="section header">
+                <h1>Contact Me</h1>
+            </div>
+
+            <div class="section content">
+                <div class="container">
+                    <form action="mailto:tisonnier2000@gmail.com" method="post" enctype="text/plain">
     
-
-    <!-- Tab Content-->
-    <div id="Projects" class="tabcontent">
-        <h1>Projects</h1>
-        <table style="width: 100%"></table>
-            <tr>
-                <td>
-                    <h2>Eclipse Phase Tools</h2>
-                    <p>Tools for assisting with the tabletop RPG Eclipse Phase</p>
-                    <a href="https://github.com/tsonnier/EclipsePhaseTools"><img src="CodeButton.png"/></a>
-                    <a href="http://tsonnier.github.io/EclipsePhaseTools/Index.html"><img src="DemoButton.png"/></a>
-                    
-                </td>
-                <td>
-                    <h2>Tax Calculator</h2>
-                    <p>Very, very basic example tax calculator using HTML, CSS, and javascript.</p>
-                    <a href="https://github.com/tsonnier/Tax-Calculator"><img src="CodeButton.png"/></a>
-                    <a href="http://tsonnier.github.io/Tax-Calculator/Index.html"><img src="DemoButton.png"/></a>
-                </td>
-            </tr>
-
-    </div>
-
-    <!-- Tab Content-->
-    <div id="Skills" class="tabcontent">
-        <h1>Professional Skills</h1>
-        <h2>Languages Used</h2>
-        <ul>
-            <li>C++</li>
-            <li>C#</li>
-            <li>HTML5/Javascript/CSS</li>
-            <li>Java</li>
-            <li>SQL</li>
-        </ul>
-    </div>
-
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
     
-    <div id="ContactMe" class="tabcontent">
-        <h1>Contact Me</h1>
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
     
-        <div class="container">
-            <form action="mailto:tisonnier2000@gmail.com" method="post" enctype="text/plain">
-
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
-
-            </form>
-        </div>       
-
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                        </select>
+    
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    
+                        <input type="submit" value="Submit">
+    
+                    </form>
+                </div>       
+            </div>
+        </div>
     </div>
 
 	<script language="javascript" src="jquery.js"></script>
