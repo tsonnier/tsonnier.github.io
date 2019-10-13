@@ -5,8 +5,7 @@ function initialize()
 {
     "use strict";
     // Load data from JSON
-	var inputElement = document.getElementById("openCharList");
-	inputElement.addEventListener("change", LoadCharList, false);
+	var inputElement = document.getElementById("Bio");
 }
 
 function openTool(evt, toolName) {
