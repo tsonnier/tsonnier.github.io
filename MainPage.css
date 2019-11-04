@@ -75,7 +75,7 @@
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
-        width: 100%
+        width: 100%;
     }
 
     /* Style the buttons that are used to open the tab content */
@@ -105,7 +105,7 @@
         padding: 6px 12px;
         border: 1px solid #ccc;
         border-top: none;
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -216,12 +216,12 @@ td
   }
   
 
-  .feature-1 {
+  .project-1 {
     background-color: #F5CF8E;
     display: block;
   }
   
-  .feature-2 {
+  .project-2 {
     background-color: #F09A9D;
     display: block;
   }
